@@ -1,3 +1,4 @@
+// Fetch questions from Open Trivia DB with a local JSON fallback
 export async function fetchQuestions(preferredCount = 10, difficulty) {
 	const diffParam = difficulty ? `&difficulty=${encodeURIComponent(difficulty)}` : '';
 	const apiUrl = `https://opentdb.com/api.php?amount=${preferredCount}&type=multiple${diffParam}`;

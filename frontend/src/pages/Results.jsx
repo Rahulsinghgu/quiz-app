@@ -1,3 +1,4 @@
+// Results page: presents per-question outcomes and overall score
 import { useLocation, useNavigate } from 'react-router-dom'
 
 export default function Results() {

@@ -1,3 +1,4 @@
+// Thin progress bar for the quiz flow
 export default function Progress({ current, total }) {
 	const percent = total > 0 ? Math.round(((current + 1) / total) * 100) : 0;
 	return (

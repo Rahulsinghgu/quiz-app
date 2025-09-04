@@ -1,3 +1,4 @@
+// Presentational card for a single question and its options
 export default function QuestionCard({ questionIndex, total, question, options, selectedIndex, onSelect }) {
 	return (
 		<div className="w-full max-w-2xl mx-auto p-6 bg-indigo-50/80 backdrop-blur shadow-lg rounded-2xl border border-indigo-100 transition-transform">

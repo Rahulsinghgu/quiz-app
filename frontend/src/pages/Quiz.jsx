@@ -1,8 +1,10 @@
+// Quiz page: orchestrates quiz flow, timer, persistence, and navigation
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { fetchQuestions } from '../services/questionsService'
 import QuestionCard from '../components/QuestionCard'
 import Progress from '../components/Progress'
 import { useNavigate } from 'react-router-dom'
+import quizLogo from '../assets/Quiz-logo.svg.jpeg'
 
 const STORAGE_KEY = 'quiz_state_v2'
 const QUESTION_TIME_SEC = 30
@@ -146,6 +148,10 @@ export default function Quiz() {
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-violet-50 to-indigo-100 py-10">
 			<div className="px-4">
+				<div className="max-w-2xl mx-auto flex items-center gap-3 mb-6">
+					<img src={quizLogo} alt="Quiz logo" className="h-10 w-10 rounded" />
+					<h1 className="text-2xl font-semibold text-indigo-900">Take the Quiz</h1>
+				</div>
 				<div className="max-w-2xl mx-auto flex items-center justify-between mb-4">
 					<Progress current={currentIndex} total={total} />
 					<div className="flex items-center gap-3">
