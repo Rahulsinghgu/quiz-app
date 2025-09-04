@@ -129,9 +129,7 @@ export default function Quiz() {
 		setSecondsLeft(QUESTION_TIME_SEC)
 	}
 
-	function handleSkip() {
-		handleNext(true)
-	}
+	// removed skip handler per requirement
 
 	function onChangeDifficulty(e) {
 		const diff = e.target.value
@@ -186,13 +184,6 @@ export default function Quiz() {
 					</button>
 
 					<div className="flex items-center gap-2">
-						<button
-							className="px-4 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 active:scale-[0.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-							onClick={handleSkip}
-							aria-label="Skip this question"
-						>
-							Skip
-						</button>
 						<button
 							className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white shadow-sm active:scale-[0.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 disabled:opacity-50"
 							onClick={() => handleNext(false)}
